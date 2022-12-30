@@ -1,0 +1,31 @@
+<html>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        </style>
+<head>
+</head>
+<body>
+  <div>
+    <table>
+      <tr>
+        {% for header in headings %}
+        <th class="cell">{{header}}</th>
+        {% endfor %}
+        <th>IP </th>
+        <th>Result </th>
+      </tr>
+      {% for row in outputip %}
+      <tr class="row">
+        
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+          
+      </tr>
+      {% endfor %}
+    </table>
+    <button onclick="history.back()">Go Back</button>
+  </div>  
+</body>
+</html>

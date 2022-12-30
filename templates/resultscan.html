@@ -1,0 +1,31 @@
+<html>
+    <style>
+        table, th, td {
+          border: 3px solid black;
+        }
+        </style>
+<head>
+</head>
+<body>
+  <div>
+    <table class="table table-hover">
+      <tr>
+        {% for header in headings %}
+        <th class="cell">{{header}}</th>
+        {% endfor %}
+        <th>Keys </th>
+        <th>Values </th>
+      </tr>
+      {% for row in output %}
+      <tr class="row">
+        
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+          
+      </tr>
+      {% endfor %}
+    </table>
+    <button onclick="history.back()">Go Back</button>
+  </div>  
+</body>
+</html>
